@@ -1,0 +1,28 @@
+﻿@inherits LayoutComponentBase
+
+<MatAppBarContainer>
+    <MatAppBar Fixed="true">
+        <MatAppBarRow>
+            <MatAppBarSection>
+                <MatIconButton Icon="menu"></MatIconButton>
+                <MatAppBarTitle>MatBlazor - Material Design components for Blazor</MatAppBarTitle>
+            </MatAppBarSection>
+            <MatAppBarSection Align="@MatAppBarSectionAlign.End">
+                <MatIconButton Icon="favorite"></MatIconButton>
+            </MatAppBarSection>
+        </MatAppBarRow>
+    </MatAppBar>
+ 
+    <MatAppBarContent>
+        <div class="mat-layout-grid">
+            <div class="mat-layout-grid-inner">
+                <div class="mat-layout-grid-cell mat-layout-grid-cell-span-2">
+                    <NavMenu />
+                </div>
+                <div class="mat-layout-grid-cell mat-layout-grid-cell-span-10">
+                    @Body
+                </div>
+            </div>
+        </div>
+    </MatAppBarContent>
+</MatAppBarContainer>
